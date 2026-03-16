@@ -667,10 +667,7 @@ footer { background: #06131F; padding: 2rem 5%; display: flex; justify-content: 
   }, { threshold: 0.3 });
   document.querySelectorAll('.stats').forEach(el => statObs.observe(el));
 
-  // Lead form — Resend integration
-  const RESEND_API_KEY = 're_172C1XpW_NqLBbAWEQUPppKdTzMXwn7wK';
-  const RESEND_AUDIENCE_ID = 'a1712258-aa64-441b-be72-7383c58aa5bd';
-
+  // Lead form — Resend integration via Vercel API
   document.getElementById('checklist-form')?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = document.getElementById('form-btn');
@@ -680,9 +677,9 @@ footer { background: #06131F; padding: 2rem 5%; display: flex; justify-content: 
     btn.textContent = 'Sending...';
     btn.disabled = true;
     try {
-      const res = await fetch('https://api.resend.com/audiences/' + RESEND_AUDIENCE_ID + '/contacts', {
+      const res = await fetch('/api/subscribe', {
         method: 'POST',
-        headers: { 'Authorization': 'Bearer ' + RESEND_API_KEY, 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, first_name: name.split(' ')[0], last_name: name.split(' ').slice(1).join(' ') || '' })
       });
       if (res.ok) {
