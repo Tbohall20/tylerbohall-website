@@ -668,33 +668,46 @@ footer { background: #06131F; padding: 2rem 5%; display: flex; justify-content: 
   document.querySelectorAll('.stats').forEach(el => statObs.observe(el));
 
   // Lead form — Resend integration via Vercel API
-  document.getElementById('checklist-form')?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = document.getElementById('form-btn');
-    const msg = document.getElementById('form-msg');
-    const name = document.getElementById('form-name').value.trim();
-    const email = document.getElementById('form-email').value.trim();
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, first_name: name.split(' ')[0], last_name: name.split(' ').slice(1).join(' ') || '' })
-      });
-      if (res.ok) {
-        btn.textContent = 'You\'re in ✓';
-        msg.textContent = 'Checklist is on its way to your inbox.';
-        msg.style.color = 'rgba(242,237,227,0.55)';
-      } else {
-        throw new Error();
+  function initForm() {
+    const form = document.getElementById('checklist-form');
+    if (!form) return;
+    
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('form-btn');
+      const msg = document.getElementById('form-msg');
+      const name = document.getElementById('form-name').value.trim();
+      const email = document.getElementById('form-email').value.trim();
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, first_name: name.split(' ')[0], last_name: name.split(' ').slice(1).join(' ') || '' })
+        });
+        if (res.ok) {
+          btn.textContent = 'You\'re in ✓';
+          msg.textContent = 'Checklist is on its way to your inbox.';
+          msg.style.color = 'rgba(242,237,227,0.55)';
+        } else {
+          throw new Error();
+        }
+      } catch (error) {
+        console.error('Form error:', error);
+        btn.textContent = 'Send me the checklist →';
+        btn.disabled = false;
+        msg.textContent = 'Something went wrong — try again or email tylerbohall@proton.me';
       }
-    } catch {
-      btn.textContent = 'Send me the checklist →';
-      btn.disabled = false;
-      msg.textContent = 'Something went wrong — try again or email tylerbohall@proton.me';
-    }
-  });
+    });
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initForm);
+  } else {
+    initForm();
+  }
+
 </script>
 </body>
 </html>
