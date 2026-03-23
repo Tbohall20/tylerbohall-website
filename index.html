@@ -234,6 +234,8 @@ h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 4vw, 3.8rem
 .service-item::before { content: '—'; color: var(--red); flex-shrink: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; }
 .service-outcome { background: rgba(192,0,10,0.05); border: 1px solid rgba(192,0,10,0.12); padding: 0.9rem 1.1rem; margin-bottom: 2rem; font-size: 0.85rem; color: var(--muted); line-height: 1.55; font-style: italic; }
 .service-badge { position: absolute; top: 2rem; right: 2rem; background: rgba(192,0,10,0.08); border: 1px solid rgba(192,0,10,0.2); color: var(--red); font-family: 'Barlow Condensed', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.7rem; }
+.service-guarantee { font-size: 0.78rem; color: var(--muted); line-height: 1.6; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--faint); font-style: italic; }
+.service-tier-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-top: 1.2rem; margin-bottom: 0.4rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--faint); }
 
 /* ── LEAD MAGNET ── */
 .lead-magnet { padding: 6rem 5%; background: var(--navy); position: relative; overflow: hidden; border-bottom: 1px solid rgba(242,237,227,0.05); }
@@ -402,13 +404,13 @@ footer { background: #06131F; padding: 2rem 5%; display: flex; justify-content: 
     <span class="ticker-item">In Search of More — 116,000% viewership growth <span class="ticker-dot"></span></span>
     <span class="ticker-item">Stay Free w/ Russell Brand — Executive Producer <span class="ticker-dot"></span></span>
     <span class="ticker-item">1 Billion+ total views across clients <span class="ticker-dot"></span></span>
-    <span class="ticker-item">5M+ subscribers across clients <span class="ticker-dot"></span></span>
+    <span class="ticker-item">8M+ subscribers across clients <span class="ticker-dot"></span></span>
     <span class="ticker-item">PBD Podcast — 200K to 1.2M in 18 months <span class="ticker-dot"></span></span>
     <span class="ticker-item">Jedediah Bila Live — 0 to 225K in 8 months <span class="ticker-dot"></span></span>
     <span class="ticker-item">In Search of More — 116,000% viewership growth <span class="ticker-dot"></span></span>
     <span class="ticker-item">Stay Free w/ Russell Brand — Executive Producer <span class="ticker-dot"></span></span>
     <span class="ticker-item">1 Billion+ total views across clients <span class="ticker-dot"></span></span>
-    <span class="ticker-item">5M+ subscribers across clients <span class="ticker-dot"></span></span>
+    <span class="ticker-item">8M+ subscribers across clients <span class="ticker-dot"></span></span>
   </div>
 </div>
 
@@ -530,24 +532,58 @@ footer { background: #06131F; padding: 2rem 5%; display: flex; justify-content: 
         <div class="service-item">2-hour channel deep dive</div>
         <div class="service-item">Written 90-day roadmap (PDF)</div>
         <div class="service-item">30-minute debrief call</div>
+        <div class="service-item">Screen-recorded audit walkthrough video</div>
+        <div class="service-item">CTR Benchmark Report — your niche vs. top performers</div>
+        <div class="service-item">Winning Thumbnail Swipe File (15 examples from your category)</div>
+        <div class="service-item">Title Formula Sheet — 10 frameworks for long-form content</div>
+        <div class="service-item">90-day check-in call</div>
       </div>
-      <div class="service-outcome">You'll leave knowing exactly what's holding your channel back — and exactly what to do about it.</div>
+      <div class="service-outcome">You'll leave knowing exactly what's holding your channel back — and exactly what to do about it. Most creators who implement the roadmap see meaningful CTR improvement within 30 days.</div>
       <a href="#book" class="btn-primary">Book a Diagnostic</a>
+      <p class="service-guarantee">The Clarity Guarantee — if you can't identify at least 3 specific, data-backed changes to make immediately after your diagnostic, I'll refund you in full. No questions asked.</p>
     </div>
     <div class="service-card featured reveal reveal-delay-2">
-      <div class="service-badge">Limited — 4 clients</div>
+      <div class="service-badge">2 of 4 spots open</div>
       <div class="service-number">02 /</div>
       <div class="service-title">Monthly Strategy<br>Retainer</div>
-      <div class="service-price">$5,000 / month</div>
-      <p class="service-body">For channels that want to move fast and stay sharp. I'm embedded in your operation — shaping packaging decisions, tracking what the data says, adjusting strategy as the algorithm moves.</p>
+      <div class="service-price">$5,000 – $15,000 / month</div>
+      <p class="service-body">For channels that want to move fast and stay sharp. Choose the level of involvement that fits your operation — from pure strategy direction to full channel ownership.</p>
       <div class="service-includes">
-        <div class="service-item">Ongoing packaging &amp; title strategy</div>
+        <div class="service-tier-label">Strategy — $5,000/mo</div>
+        <div class="service-item">Packaging &amp; title strategy</div>
         <div class="service-item">Monthly performance review</div>
         <div class="service-item">Direct access — no account manager</div>
-        <div class="service-item">Hard cap of 4 clients at a time</div>
+        <div class="service-tier-label">Strategy + Oversight — $8,000–$10,000/mo</div>
+        <div class="service-item">Everything above</div>
+        <div class="service-item">Pre-publish review of every video</div>
+        <div class="service-item">Title and brief writing</div>
+        <div class="service-item">Weekly check-ins</div>
+        <div class="service-tier-label">Full Channel Ownership — $15,000/mo</div>
+        <div class="service-item">Everything above</div>
+        <div class="service-item">Full packaging ownership</div>
+        <div class="service-item">Content calendar</div>
+        <div class="service-item">Twice-weekly check-ins</div>
+        <div class="service-item">Monthly reporting</div>
       </div>
-      <div class="service-outcome">Most clients start with a diagnostic. Retainers are for the ones who want to keep the momentum going.</div>
+      <div class="service-outcome">Hard cap of 4 clients at a time. You work directly with me — not a junior strategist.</div>
       <a href="#book" class="btn-primary">Start a Conversation</a>
+    </div>
+    <div class="service-card reveal reveal-delay-3" style="opacity: 0.75;">
+      <div class="service-badge">Coming Soon</div>
+      <div class="service-number">03 /</div>
+      <div class="service-title">Podcast YouTube<br>Accelerator</div>
+      <div class="service-price">Group Program — from $497</div>
+      <p class="service-body">A small-cohort program for podcast creators who want the strategy without the retainer price tag. Six weeks. Eight to twelve creators. One framework — applied directly to your channel.</p>
+      <div class="service-includes">
+        <div class="service-item">6-week live cohort</div>
+        <div class="service-item">Weekly group strategy session</div>
+        <div class="service-item">Channel packaging workshop</div>
+        <div class="service-item">90-day roadmap built with you</div>
+        <div class="service-item">Title and thumbnail framework</div>
+        <div class="service-item">Direct feedback on your channel</div>
+      </div>
+      <div class="service-outcome">The same packaging system that took PBD Podcast from 200K to 1.2M — taught directly, in a group setting.</div>
+      <a href="mailto:tylerbohall@proton.me?subject=Accelerator%20Waitlist" class="btn-ghost">Join the Waitlist →</a>
     </div>
   </div>
 </section>
