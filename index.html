@@ -141,6 +141,14 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 5.5vw, 5.8rem
 .section-label { display: inline-flex; align-items: center; gap: 0.75rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 1.25rem; }
 .section-label::before { content: ''; display: block; width: 22px; height: 2px; background: var(--red); flex-shrink: 0; }
 
+/* ── PROBLEM ── */
+.problem-section { padding: 6rem 5%; border-bottom: 1px solid var(--faint); background: var(--cream); }
+.problem-inner { max-width: 1100px; margin: 0 auto; }
+.problem-inner h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.8rem, 5vw, 5rem); line-height: 0.95; color: var(--navy); margin-bottom: 2.5rem; letter-spacing: 0.02em; }
+.problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.problem-body { font-size: 0.95rem; color: var(--muted); line-height: 1.78; margin-bottom: 1.25rem; }
+.problem-col:last-child .problem-body:last-child { margin-bottom: 0; }
+
 /* ── PROOF BAR ── */
 .proof-bar { padding: 1.75rem 5%; border-bottom: 1px solid var(--faint); display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; background: var(--cream); }
 .proof-bar-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); white-space: nowrap; flex-shrink: 0; opacity: 0.6; }
@@ -342,6 +350,7 @@ footer { background: #06131F; padding: 2rem 5%; display: flex; justify-content: 
   .stat-item:nth-child(3) { border-top: 1px solid var(--faint); }
   .stat-item:nth-child(4) { border-top: 1px solid var(--faint); border-right: none; }
   .process-grid { grid-template-columns: 1fr; }
+  .problem-grid { grid-template-columns: 1fr; gap: 0; }
   .services-grid { grid-template-columns: 1fr; }
   .case-studies { grid-template-columns: 1fr; }
   .clawdraft-inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -437,6 +446,24 @@ footer { background: #06131F; padding: 2rem 5%; display: flex; justify-content: 
       <div class="stat-number">0→<span data-target="225" data-suffix="K">225K</span></div>
       <div class="stat-label">In 8 months<br>Jedediah Bila Live</div>
       <div class="stat-context">Built from zero, no paid promotion</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem-section">
+  <div class="problem-inner reveal">
+    <div class="section-label">The Real Issue</div>
+    <h2>The content isn't<br>the problem.</h2>
+    <div class="problem-grid">
+      <div class="problem-col">
+        <p class="problem-body">Most podcast hosts and long-form creators are putting out genuinely good content. The episodes are strong. The guests are compelling. The production is clean. And the channel is still flat.</p>
+        <p class="problem-body">The issue is almost never what's inside the video. It's everything around it — how the video is packaged, how it's positioned in the algorithm, how it signals value to a viewer who's never heard of you before.</p>
+      </div>
+      <div class="problem-col">
+        <p class="problem-body">YouTube treats every video like a product on a shelf. If the packaging doesn't communicate what it is and why it matters in the first half-second, the viewer moves on. The algorithm follows the viewer.</p>
+        <p class="problem-body">That's the gap. And it's fixable — not with more content, not with a bigger budget, but with a packaging and positioning strategy built specifically for how YouTube actually works.</p>
+      </div>
     </div>
   </div>
 </section>
