@@ -191,12 +191,13 @@ h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 4vw, 3.8rem
 
 /* ── PROCESS ── */
 .process { padding: 6rem 5%; border-bottom: 1px solid var(--faint); background: var(--cream); }
-.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--faint); margin-top: 3rem; }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--faint); }
+.process-intro { color: var(--muted); font-size: 0.95rem; line-height: 1.75; max-width: 600px; margin-bottom: 3rem; }
 .process-step { background: var(--cream-dark); padding: 2.5rem 2rem; position: relative; transition: background 0.25s; }
 .process-step:hover { background: var(--cream); }
 .process-step::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
 .process-step:hover::before { transform: scaleX(1); }
-.process-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: rgba(11,34,64,0.07); line-height: 1; margin-bottom: 0.75rem; }
+.process-number { font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; letter-spacing: 0.22em; color: var(--muted); margin-bottom: 1.25rem; }
 .process-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--navy); letter-spacing: 0.02em; margin-bottom: 0.75rem; }
 .process-body { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
 
@@ -495,23 +496,29 @@ footer { background: #06131F; padding: 2rem 5%; display: flex; justify-content: 
 
 <!-- PROCESS -->
 <section class="process reveal" id="process">
-  <div class="section-label">How It Works</div>
-  <h2>Three steps.<br>No guesswork.</h2>
+  <div class="section-label">The Framework</div>
+  <h2>One system.<br>Four levers.</h2>
+  <p class="process-intro">Most channels aren't broken. They're incomplete. The same four variables determine whether a channel compounds or flatlines — regardless of niche, budget, or upload frequency.</p>
   <div class="process-grid">
     <div class="process-step reveal reveal-delay-1">
-      <div class="process-num">01</div>
-      <div class="process-title">Full Channel Audit</div>
-      <p class="process-body">CTR in context, retention curves, post-watch behavior, packaging, thumbnails, titles, upload cadence, Shorts strategy. Every variable gets examined — not just the obvious ones.</p>
+      <div class="process-number">01 /</div>
+      <div class="process-title">Packaging</div>
+      <p class="process-body">What the video looks like before anyone clicks. Thumbnail, title, hook structure. This is where most channels leak — and it's the first thing I look at. Fix the packaging and everything downstream improves.</p>
     </div>
     <div class="process-step reveal reveal-delay-2">
-      <div class="process-num">02</div>
-      <div class="process-title">A Clear Diagnosis</div>
-      <p class="process-body">No vague feedback. No "post more consistently." The two or three things actually limiting growth get identified, prioritized, and explained — with the data to back it up.</p>
+      <div class="process-number">02 /</div>
+      <div class="process-title">Content Strategy</div>
+      <p class="process-body">What to say, in what format, at what cadence. Built around how your specific audience actually behaves on YouTube — not a generic posting schedule. The right content strategy makes every video work harder than the last.</p>
     </div>
     <div class="process-step reveal reveal-delay-3">
-      <div class="process-num">03</div>
-      <div class="process-title">A 90-Day Roadmap</div>
-      <p class="process-body">A written plan delivered as a PDF. What to change, in what order, and what success looks like. Built to be executed with or without continued engagement.</p>
+      <div class="process-number">03 /</div>
+      <div class="process-title">Distribution</div>
+      <p class="process-body">YouTube isn't one surface. Search, browse, Shorts, suggested, and external traffic each require a different approach. Most channels rely on one and wonder why growth has stalled. Distribution is the multiplier.</p>
+    </div>
+    <div class="process-step reveal reveal-delay-4">
+      <div class="process-number">04 /</div>
+      <div class="process-title">Performance</div>
+      <p class="process-body">CTR, retention curves, post-watch behavior — the data tells you exactly what's working and what isn't. Every decision gets made from the numbers, not instinct. That's what separates channels that compound from channels that plateau.</p>
     </div>
   </div>
 </section>
