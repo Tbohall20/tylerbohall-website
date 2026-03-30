@@ -293,6 +293,18 @@ h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 4vw, 3.8rem
 .case-timeframe { font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; opacity: 0.6; }
 .case-body { font-size: 0.9rem; color: var(--muted); line-height: 1.72; }
 
+/* ── BRAND STRIP + CASE STATS ── */
+.brand-strip { margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--faint); }
+.brand-strip-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; }
+.brand-logos { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; }
+.brand-logo-item { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.06em; color: var(--navy); opacity: 0.35; white-space: nowrap; transition: opacity 0.2s; }
+.brand-logo-item:hover { opacity: 0.7; }
+.case-stat-bar { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--faint); flex-wrap: wrap; }
+.case-stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--navy); line-height: 1; letter-spacing: 0.02em; }
+.case-stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.25rem; }
+.case-stat-arrow { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--red); opacity: 0.6; }
+.case-stat-divider { width: 1px; height: 2.5rem; background: var(--faint); margin: 0 0.5rem; }
+
 /* ── FINAL CTA ── */
 .final-cta { padding: 8rem 5%; text-align: center; position: relative; overflow: hidden; background: var(--navy); }
 .final-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 100% at 50% 50%, rgba(192,0,10,0.1) 0%, transparent 65%); }
@@ -353,6 +365,10 @@ footer { background: #06131F; padding: 2rem 5%; display: flex; justify-content: 
   .problem-grid { grid-template-columns: 1fr; gap: 0; }
   .services-grid { grid-template-columns: 1fr; }
   .case-studies { grid-template-columns: 1fr; }
+  .brand-logos { gap: 0.75rem 1.5rem; }
+  .brand-logo-item { font-size: 1.1rem; }
+  .case-stat-bar { gap: 1rem; }
+  .case-stat-divider { display: none; }
   .clawdraft-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .about { grid-template-columns: 1fr; }
   .about-founder { padding: 3rem 5%; }
@@ -681,12 +697,38 @@ footer { background: #06131F; padding: 2rem 5%; display: flex; justify-content: 
 <section class="testimonials" id="results">
   <div class="section-label">Results</div>
   <h2 style="margin-bottom: 3rem;">The work speaks<br>for itself.</h2>
+  <div class="brand-strip reveal">
+    <div class="brand-strip-label">Channels I've worked inside</div>
+    <div class="brand-logos">
+      <div class="brand-logo-item">PBD Podcast</div>
+      <div class="brand-logo-item">Valuetainment</div>
+      <div class="brand-logo-item">Jedediah Bila Live</div>
+      <div class="brand-logo-item">Stay Free w/ Russell Brand</div>
+      <div class="brand-logo-item">In Search of More</div>
+    </div>
+  </div>
   <div class="case-studies">
     <div class="case-study reveal">
       <div class="case-channel">PBD Podcast</div>
       <div class="case-result">200K → 1.2M</div>
       <div class="case-timeframe">18 months</div>
       <p class="case-body">The channel had real content and a real audience. The problem was that YouTube didn't know what the show was for — and neither did first-time visitors. Repositioned the packaging, tightened the content signal, and built a distribution system that treated each video like a product launch. In the first 90 days CTR nearly doubled. Over 18 months the channel grew from 200,000 to 1.2 million subscribers. The content didn't change. The packaging did.</p>
+      <div class="case-stat-bar">
+        <div class="case-stat">
+          <div class="case-stat-number">200K</div>
+          <div class="case-stat-label">Subscribers at start</div>
+        </div>
+        <div class="case-stat-arrow">→</div>
+        <div class="case-stat">
+          <div class="case-stat-number">1.2M</div>
+          <div class="case-stat-label">Subscribers at 18 months</div>
+        </div>
+        <div class="case-stat-divider"></div>
+        <div class="case-stat">
+          <div class="case-stat-number">~2x</div>
+          <div class="case-stat-label">CTR improvement in 90 days</div>
+        </div>
+      </div>
     </div>
     <div class="case-study reveal reveal-delay-1">
       <div class="case-channel">Jedediah Bila Live</div>
