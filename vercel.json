@@ -1,0 +1,13 @@
+{
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "installCommand": "",
+  "env": {},
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://aurumhealth.io",
+      "permanent": true
+    }
+  ]
+}
